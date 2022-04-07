@@ -5,18 +5,14 @@ var hour = document.querySelectorAll(".description");
 var hourNow = moment().hour();
 var plannerHour = document.getElementById("now").textContent;
 
-console.log(hour);
-
-
-if (hourNow > plannerHour) {
+// Changes input box background every hour
+if (hourNow > 9) {
     pastClass();
 } else if (hourNow === plannerHour) {
     presentClass();
 } else {
     futureClass();
 }
-
-// [0].className
 
 function pastClass() {
     for (const past of hour) {
